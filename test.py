@@ -1,4 +1,4 @@
-str1 = "Daya"
-str2 = "shankar"
+str1 = "Ranju"
+str2 = "Chinnu munnu"
 fname = str1 + " " + str2
-print(fname)
+print(fname.lower())
