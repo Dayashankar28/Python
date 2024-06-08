@@ -80,3 +80,40 @@ thislist2 = ["mango", "grapes", "berries"]
 
 thislist1.extend(thislist2)
 print(thislist1)
+
+        #Add Any Iterable
+'''The extend() method does not have to append lists, 
+ you can add any iterable object (tuples, sets, dictionaries etc.)'''
+
+thislist = ["apple", "banana", "cherry"]
+thistuple = ("mango", 3, "cars", "456")
+
+thislist.extend(thistuple)
+print(thislist)
+print(type(thislist))
+
+# Remove List Items
+
+        #Remove Specified Item
+''' The remove() method removes the specified item '''
+
+thislist = ["apple", "banana", "cherry"]
+thislist.remove("banana")
+print(thislist)
+
+        #Remove Specified Index
+''' The pop() method removes the specified index '''
+
+thislist = ["apple", "banana", "cherry", "mango", "grapes", "berries"]
+thislist.pop(1)
+print(thislist)
+
+        #Clear the List
+''' The clear() method empties the list.
+
+The list still remains, but it has no content '''
+
+thislist = ["apple", "banana", "cherry", "mango", "grapes", "berries"]
+print(len(thislist))
+thislist.clear()
+print(thislist, len(thislist))
