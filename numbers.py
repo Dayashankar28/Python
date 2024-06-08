@@ -38,3 +38,12 @@ print("Absolute Value:", num)
 # Rounding
 dec = round(3.199, 1)  # Rounds to 2 decimal places
 print("Rounded:", dec)
+
+# Floating point addition
+num1 = 10
+num2 = 2
+addition = num1 + num2
+print(type(num1))
+print(type(num2))
+print(f'''addition  of {num1} and {num2} is : ''', addition ,type(addition))
+
