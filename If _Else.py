@@ -58,3 +58,65 @@ elif b > a and b > c :
     print(f"B = {b} is greater then A = {a} and C = {c}")
 else :
     print(f"C = {c} is greater then A = {a} and B = {b}")
+
+# Short Hand If
+'''If you have only one statement to execute, you can put it on the same line as the if statement.'''
+a = 30
+b = 4
+if a > b : 
+    print("a is greater")
+
+#Short Hand If ... Else
+'''If you have only one statement to execute, one for if, and one for else, you can put it all on the same line:'''
+a = 10
+b = 30
+print("A is greater") if a > b else print("B is greater")
+
+# --- This technique is known as Ternary Operators, or Conditional Expressions. ----
+
+a = 330
+b = 33
+print("A") if a > b else print("=") if a == b else print("B")
+
+# ------------- And -------------
+'''The and keyword is a logical operator, and is used to combine conditional statements:'''
+a = 330
+b = 33
+c = 0
+if a > b and a > c :
+    print(f"A = {a} is greater")
+# ------------- Or -------------
+'''The or keyword is a logical operator, and is used to combine conditional statements:'''
+a = 330
+b = 33333
+c = 0
+
+if a > b or a > c:
+    print(f"A = {a} is greater")
+
+# ------------- Not-------------
+'''The not keyword is a logical operator, and is used to reverse the result of the conditional statement:'''
+a = 10
+b = 100
+
+if not a > b :
+    print(" a is not grater")
+
+# ---------------------  Nested If ---------------------
+'''You can have if statements inside if statements, this is called nested if statements.'''
+
+a = 100
+if a > 50 :
+    print("grt 50")
+    if a >= 100 :
+        print (" grt or eq 100")
+    else :
+        print("less 100")
+
+# ------------------- The pass Statement --------------------
+'''if statements cannot be empty, but if you for some reason have an if statement with no content, 
+put in the pass statement to avoid getting an error.    '''
+a = 1011
+b = 100
+if  a > b :
+    pass
