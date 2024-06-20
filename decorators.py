@@ -24,6 +24,3 @@ def loop1(m, n):
     for i in range(100000000):
         pass
 loop1("2","22")
-
-
-    
