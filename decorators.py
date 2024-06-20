@@ -13,14 +13,13 @@ def cal_time(func):
     return wrapper
 
 @cal_time
-def loop(x, y):
-    for i in range(100000000):
-        pass
+def sqr(n):
+    return n * n
 
-loop("1","111")
+sqr(10)
 
 @cal_time
 def loop1(m, n):
-    for i in range(100000000):
+    for i in range(500000000):
         pass
 loop1("2","22")
