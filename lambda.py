@@ -31,3 +31,29 @@ countries = ['India', 'sl', 'usa', 'germany']
 
 x = map(lambda a : a.upper(), countries)
 print(list(x))
+
+
+def inner_function():
+	print("inner_function is called")
+    
+def outer_function(func):
+	print("outer_function is called")
+	func()
+   
+outer_function(inner_function)
+
+#############
+def outer_function():
+	print("outer_function is called")
+    
+	def inner_function():
+    		print("inner_function is called")
+        
+        return inner_function
+
+returned_function = outer_function()
+# outer_funciton is called
+
+returned_function()
+# inner_function is called
+
