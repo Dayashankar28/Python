@@ -1,2 +1,2 @@
 def welcome(name):
-    print("Niavaan, " + name + "!!!!")
+    print("Niavaan",name, "!!!!")
