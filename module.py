@@ -15,3 +15,4 @@ Save this code in a file named mymodule.py
 '''
 import mymodule
 mymodule.welcome("Ranju")
+mymodule.add(5, 0)
