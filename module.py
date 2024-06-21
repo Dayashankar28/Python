@@ -14,5 +14,4 @@ Save this code in a file named mymodule.py
 '''Now we can use the module we just created, by using the import statement:
 '''
 import mymodule
-
 mymodule.welcome("Ranju")
