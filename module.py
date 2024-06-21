@@ -19,3 +19,11 @@ mymodule.welcome("Ranju")
 mymodule.add(5,0)
 mymodule.sub(5,3)
 
+# --------------------- Variables in Module
+'''The module can contain functions, as already described, but also variables of all types (arrays, dictionaries, objects etc):'''
+
+import mymodule
+
+a = (mymodule.person1)
+for i, j in a.items():
+    print(i, j)

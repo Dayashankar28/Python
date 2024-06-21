@@ -8,3 +8,8 @@ def sub(a, b):
 def welcome(name):
     print(f'Welcome.... {name}!!!!!!')
 
+person1 = {
+  "name": "John",
+  "age": 36,
+  "country": "Norway"
+}
