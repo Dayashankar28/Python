@@ -9,5 +9,9 @@ A file containing a set of functions you want to include in your application.
 ExampleGet your own Python Server
 Save this code in a file named mymodule.py
 '''
-def greeting(name):
-  print("Hello, " + name)
+
+# Use a Module
+'''Now we can use the module we just created, by using the import statement:
+'''
+
+from mymodules import 
