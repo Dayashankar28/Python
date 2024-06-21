@@ -14,4 +14,6 @@ Save this code in a file named mymodule.py
 '''Now we can use the module we just created, by using the import statement:
 '''
 
-from mymodules import 
+import mymodule
+
+mymodule.welcome("R")
