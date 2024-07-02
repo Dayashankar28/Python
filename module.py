@@ -76,20 +76,60 @@ print(x)
 os.system('rm -rf d')
 
 # ------------------- products using api ----------------
+import json, requests
 
-import json
-import requests
+def fetch_products():
+    url = 'https://fakestoreapi.com/products'
+    response = requests.get(url)
+    return response.json()
 
-response = requests.get('https://fakestoreapi.com/products')
-print(response)
-products = json.loads(response.text)
-print(type(products))
-print(len(products))
+def check_electronics(data):
+    return data['category'] == 'electronics'
 
-def check_ele(data):
-    if data['category'] == 'electronics':
-        return data
+if __name__ == "__main__":
+    products = fetch_products()
+    print("Response status:", products)
+    print("Type of products:", type(products))
+    print("Number of products:", len(products))
 
+    electronics_data = list(filter(check_electronics, products))
+    print("Number of electronics products:", len(electronics_data))
 
-ele_data = list(filter(check_ele, products))
-print(len(ele_data))
+# ------------------- number of repo ----------------
+
+import json, requests
+
+def get_user_data():
+    url = 'https://api.github.com/users/iam-veeramalla'
+    response = requests.get(url)
+    return response.json()
+data = get_user_data()
+print("Data type is : ", (type(data)))
+print("Data len is : ", (len(data)))
+
+#Name = data.get("name")
+#followers = data.get("followers")
+#public_repos = data.get("public_repos")
+#
+#print(f'Name of the user is : {Name} \n Total number of followers is : {followers} \n number if respos is : {public_repos}')
+
+filtered_dict = {key: data[key] for key in ['name', 'followers']}
+
+print(filtered_dict)
+
+##########
+
+original_dict = {
+  "name": "Abhishek Veeramalla",
+  "company": "Red Hat",
+  "blog": "www.youtube.com/@AbhishekVeeramalla",
+  "location": "Hyderabad, India",
+  "email": None,
+  "public_gists": 8,
+  "followers": 12468,
+  "following": 1
+}
+
+filtered_dict = dict(filter(lambda item: item[0] in ['name', 'followers'], original_dict.items()))
+
+print(filtered_dict)
