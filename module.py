@@ -74,3 +74,22 @@ x = os.getcwd()
 print(x)
 
 os.system('rm -rf d')
+
+# ------------------- products using api ----------------
+
+import json
+import requests
+
+response = requests.get('https://fakestoreapi.com/products')
+print(response)
+products = json.loads(response.text)
+print(type(products))
+print(len(products))
+
+def check_ele(data):
+    if data['category'] == 'electronics':
+        return data
+
+
+ele_data = list(filter(check_ele, products))
+print(len(ele_data))
