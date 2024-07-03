@@ -97,7 +97,7 @@ if __name__ == "__main__":
 
 # ------------------- number of repo ----------------
 
-import json, requests
+import json, requests, wget
 
 def get_user_data():
     url = 'https://api.github.com/users/iam-veeramalla'
@@ -106,13 +106,13 @@ def get_user_data():
 data = get_user_data()
 print("Data type is : ", (type(data)))
 print("Data len is : ", (len(data)))
-
-#Name = data.get("name")
-#followers = data.get("followers")
-#public_repos = data.get("public_repos")
+Name = data.get("name")
+followers = data.get("followers")
+public_repos = data.get("public_repos")
+print((type(json.dumps(data))))
 #
 #print(f'Name of the user is : {Name} \n Total number of followers is : {followers} \n number if respos is : {public_repos}')
-
+######## --------------
 filtered_dict = {key: data[key] for key in ['name', 'followers']}
 
 print(filtered_dict)
