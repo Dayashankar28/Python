@@ -1,2 +1,1 @@
-# Python
-Python Learning
+# ------- PYTHON Learning -------#

@@ -41,3 +41,13 @@ open("README.md")
 '''
 f = open("README.md", "rt")
 #Because "r" for read, and "t" for text are the default values, you do not need to specify them.
+
+
+#### opening and writing ####
+f = open("example.txt", "w")
+i = open("README.md","w")
+f.write("This is from file handling....")
+i.write("This is from file handling....")
+f.close()
+i.close()
+
