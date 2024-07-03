@@ -1,14 +1,3 @@
-# import json
-# data = ""
-# with open("dummy_data.txt", "r", encoding="utf8") as f1:
-#    data = f1.read()
-
-# def get_description(d):
-#    return d["description", "teams_url"]
-
-# description =  list(map(get_description, json.loads(data)))
-# print((description))
-
 # #//////////////////////////////////////////
 import requests, json, wget
 
@@ -33,13 +22,17 @@ if response.status_code == 200:
             "username": user['username'],
             "phone": user['phone']
         }
-        user_data_list.append(user_data)
+        if user_data['id'] < 6:
+            user_data_list.append(user_data)
+        else:
+            break
     
     # Print the list of dictionaries
     for user_data in user_data_list:
         print(user_data)
+
 else:
     print(f"Failed to retrieve data. Status code: {response.status_code}")
+# with open("example.txt", "w") as f1:
+#     f1.write(json.dumps(user_data_list))
 
-with open("example.txt", "w") as f1:
-    f1.write(json.dumps(user_data_list))
