@@ -43,7 +43,7 @@ f = open("README.md", "rt")
 #Because "r" for read, and "t" for text are the default values, you do not need to specify them.
 
 
-#### opening and writing ####
+#### opening and writing ( you need to close opened files)####
 f = open("example.txt", "w")
 i = open("README.md","w")
 f.write("This is from file handling....")
@@ -51,3 +51,11 @@ i.write("This is from file handling....")
 f.close()
 i.close()
 
+#### open and write without closeing ###
+
+with open("example.txt", "w") as f1:
+    f1.write("\n this is sentance two")
+    
+f = open(r"C:\Users\mmday\OneDrive\Documents\1.xlsx", "a")
+f.write("jihjhkjjkhjkjkjkhNin masdsadka")
+######
