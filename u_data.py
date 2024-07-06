@@ -82,7 +82,7 @@ def scrape(data):
 if response.status_code == 200:
     data = response.json()
 
-    f_data = list(filter(scrape, data))
+    f_data = list(filter(scrape, response.json()))
     print((len(f_data)))
 
     p_details = []

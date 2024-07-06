@@ -1,20 +1,20 @@
 import requests, pandas as pd
 
-url = 'https://api.escuelajs.co/api/v1/products'
+url = 'https://fakestoreapi.com/products'
 
 # Send GET request to the API endpoint
 response = requests.get(url)
 
 # Check if the request was successful (status code 200)
 if response.status_code == 200:
-    # Parse JSON response
+    # Parse JSON response  
     data = response.json()
 
     # Extract image URLs from the response data
     image_urls = []
     for product in data:
-        if 'images' in product:
-            image_urls.append(product['images'])
+        if 'image' in product:
+            image_urls.append(product['image'])
 
     # Print the extracted image URLs
     for url in image_urls:
