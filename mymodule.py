@@ -1,3 +1,5 @@
+import json, requests
+
 def add(a, b):
     print(a + b)
     
@@ -13,3 +15,7 @@ person1 = {
   "age": 36,
   "country": "Norway"
 }
+
+def get_data(url):
+    response = requests.get(url)
+    return response.json()
