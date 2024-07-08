@@ -1,7 +1,7 @@
 import json, requests
 
 def add(a, b):
-    print(a + b)
+    print(f' sum of {a} + {b} is {a+b}')
     
 def sub(a, b):
     return a - b
