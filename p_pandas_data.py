@@ -10,6 +10,8 @@ if response.status_code == 200:
     # Parse JSON response  
     data = response.json()
 
+    print(type(data))
+
     # Extract image URLs from the response data
     image_urls = []
     for product in data:
