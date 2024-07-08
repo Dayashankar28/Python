@@ -3,8 +3,8 @@ from mymodule import get_data
 
 url = 'https://api.github.com/users/Dayashankar28/repos?ref=codesnippet.io'
 response = requests.get(url)
-username = url.split('/')[-2] + '_links.xlsx'
-
+excel_name = url.split('/')[-2] + '_links.xlsx'
+txt_file = url.split('/')[-2] + '.txt'
 d = response.json()
 
 url_list = []
@@ -25,4 +25,7 @@ print(url_list)
 # print(downloads_url_list)
 
 df = pd.DataFrame({'URL':url_list})
-df.to_excel(username, index = False)
+df.to_excel(excel_name, index = False)
+
+with open(txt_file, 'w') as f1:
+    f1.write(str(d))
